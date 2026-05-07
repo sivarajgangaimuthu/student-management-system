@@ -1,0 +1,304 @@
+:root {
+  --app-bg: #f6f8fb;
+  --app-ink: #172033;
+  --app-muted: #667085;
+  --app-border: #dde3ec;
+  --app-primary: #2563eb;
+  --app-primary-dark: #1d4ed8;
+  --app-accent: #0f766e;
+  --app-panel: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--app-ink);
+  background: var(--app-bg);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.main-content {
+  min-height: calc(100vh - 64px);
+}
+
+.navbar {
+  min-height: 64px;
+}
+
+.brand-mark,
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  background: var(--app-primary);
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+}
+
+.nav-link.active {
+  color: var(--app-primary) !important;
+  font-weight: 700;
+}
+
+.btn {
+  border-radius: 8px;
+  font-weight: 650;
+}
+
+.btn-primary {
+  background: var(--app-primary);
+  border-color: var(--app-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--app-primary-dark);
+  border-color: var(--app-primary-dark);
+}
+
+.section-kicker {
+  color: var(--app-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.home-page {
+  background:
+    linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 70%),
+    var(--app-bg);
+}
+
+.dashboard-preview,
+.form-panel,
+.details-panel,
+.table-panel,
+.empty-state {
+  background: var(--app-panel);
+  border: 1px solid var(--app-border);
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(23, 32, 51, 0.08);
+}
+
+.dashboard-preview {
+  padding: 1.25rem;
+}
+
+.preview-header,
+.page-header,
+.toolbar,
+.details-header,
+.student-cell {
+  display: flex;
+  align-items: center;
+}
+
+.preview-header,
+.page-header,
+.toolbar {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.preview-label {
+  color: var(--app-muted);
+  font-size: 0.85rem;
+}
+
+.status-pill {
+  color: #047857;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.metric-tile {
+  min-height: 135px;
+  padding: 1rem;
+  border: 1px solid var(--app-border);
+  border-radius: 8px;
+  background: #fbfcff;
+}
+
+.metric-tile strong,
+.metric-tile span {
+  display: block;
+}
+
+.metric-tile strong {
+  font-size: 1.4rem;
+}
+
+.metric-tile span {
+  color: var(--app-muted);
+}
+
+.toolbar {
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  max-width: 520px;
+}
+
+.table-panel {
+  overflow: hidden;
+}
+
+.table thead th {
+  color: #475467;
+  background: #f9fafb;
+  border-bottom-color: var(--app-border);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.table td,
+.table th {
+  padding: 1rem;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.avatar-large {
+  width: 72px;
+  height: 72px;
+  font-size: 1.4rem;
+}
+
+.student-cell {
+  gap: 0.75rem;
+}
+
+.icon-button {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.empty-state {
+  padding: 3rem 1.5rem;
+}
+
+.narrow-page {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.form-panel {
+  padding: 1.5rem;
+}
+
+.form-label {
+  color: #344054;
+  font-weight: 700;
+}
+
+.form-control,
+.input-group-text {
+  border-color: var(--app-border);
+  border-radius: 8px;
+}
+
+.input-group > .input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group > .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.details-panel {
+  padding: 1.5rem;
+}
+
+.details-header {
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.detail-item {
+  display: flex;
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 1px solid var(--app-border);
+  border-radius: 8px;
+  background: #fbfcff;
+}
+
+.detail-item span,
+.detail-item strong {
+  display: block;
+}
+
+.detail-item span {
+  color: var(--app-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 767px) {
+  .page-header,
+  .toolbar,
+  .details-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-box {
+    max-width: none;
+  }
+
+  .preview-grid,
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table td,
+  .table th {
+    white-space: nowrap;
+  }
+}
