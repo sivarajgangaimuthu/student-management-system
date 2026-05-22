@@ -1,4 +1,4 @@
-import { ArrowRight, Building2, MapPin, Server, Users } from 'lucide-react';
+import { ArrowRight, Building2, Mail, MapPin, Users } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AlertMessage from '../components/AlertMessage.jsx';
@@ -34,9 +34,9 @@ function HomePage() {
       totalStudents: students.length,
       departments: departments.size,
       cities: cities.size,
-      backendStatus: alert ? 'Offline' : 'Online',
+      emails: students.length,
     };
-  }, [alert, students]);
+  }, [students]);
 
   const recentStudents = students.slice(0, 4);
 
@@ -74,7 +74,6 @@ function HomePage() {
                   <span className="preview-label">Today</span>
                   <h2 className="h5 mb-0">Student Overview</h2>
                 </div>
-                <span className={`status-pill ${alert ? 'status-offline' : ''}`}>{stats.backendStatus}</span>
               </div>
 
               {loading ? (
@@ -85,7 +84,7 @@ function HomePage() {
                     <DashboardMetric icon={Users} value={stats.totalStudents} label="Total Students" />
                     <DashboardMetric icon={Building2} value={stats.departments} label="Departments" />
                     <DashboardMetric icon={MapPin} value={stats.cities} label="Cities" />
-                    <DashboardMetric icon={Server} value={stats.backendStatus} label="Backend API" />
+                    <DashboardMetric icon={Mail} value={stats.emails} label="Student Emails" />
                   </div>
 
                   <div className="recent-panel">
